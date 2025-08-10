@@ -24,7 +24,7 @@ def song_writer_agent(input: list[Message], context: Context) -> Iterator:
     try:
         url = str(AnyUrl(str(input[-1])))
     except ValueError:
-        yield MessagePart(content="This is not a URL, please provide valid website.")
+        yield MessagePart(content="This is not a URL, please provide valid website.") 
         return
 
     website_scraper = Agent(
