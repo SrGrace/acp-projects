@@ -68,5 +68,5 @@ async def lang_graph_greeting_agent(input: list[Message]) -> AsyncGenerator[RunY
         output = event
     yield MessagePart(content=output.get("format_response", {}).get("final_response", ""))
 
-
+# run the server
 server.run()
