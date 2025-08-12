@@ -50,6 +50,7 @@ workflow.add_edge("get_time", "decide_greeting")
 workflow.add_edge("decide_greeting", "format_response")
 workflow.set_finish_point("format_response")
 
+# compile the graph
 graph = workflow.compile()
 
 # create ACP server
