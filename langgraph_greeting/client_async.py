@@ -6,7 +6,7 @@ from acp_sdk.models import (
     MessagePart,
 )
 
-# base url is of the server
+# base url is of the server and agent is also from the corresponding server
 async def client() -> None:
     async with Client(base_url="http://localhost:8000") as client:
         run = await client.run_sync(
