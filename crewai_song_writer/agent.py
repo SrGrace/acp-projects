@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 model_id = "watsonx/mistralai/mistral-medium-2505"
-llm = LLM(model=model_id, temperature=0.1, max_tokens=1000) # it requires WATSONX_API_KEY, WATSONX_PROJECT_ID & WATSONX_URL to be set in the .env file
+llm = LLM(model=model_id, temperature=0.1, max_tokens=1000) # it requires WATSONX_API_KEY, WATSONX_PROJECT_ID & WATSONX_URL to be set in the .env file. its internal to crewai LLM
 
 
 server = Server()
