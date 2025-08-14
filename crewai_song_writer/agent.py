@@ -12,11 +12,12 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 model_id = "watsonx/mistralai/mistral-medium-2505"
-llm = LLM(model=model_id, temperature=0.1, max_tokens=1000) # it requires WATSONX_API_KEY, WATSONX_PROJECT_ID & WATSONX_URL to be set on the .env file
+llm = LLM(model=model_id, temperature=0.1, max_tokens=1000) # it requires WATSONX_API_KEY, WATSONX_PROJECT_ID & WATSONX_URL to be set in the .env file
 
 
 server = Server()
 
+# create server agent
 @server.agent()
 def song_writer_agent(input: list[Message], context: Context) -> Iterator:
     """Agent that writes a song about a website. Accepts a message with URL"""
